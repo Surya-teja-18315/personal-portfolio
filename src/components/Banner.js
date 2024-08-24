@@ -56,7 +56,8 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Surya Teja`} <span className="txt-rotate" dataPeriod="1000" data-rotate='["Full Stack Developer", "Frontend Developer", "Web Developer" ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hi! I'm Surya Teja`}</h1>
+                <h1>{'Full stack Developer'}</h1>
                   <p>
                   I specialize in using React.js and Tailwind CSS to create responsive, optimized web applications. My experience includes transforming designs into dynamic interfaces, enhancing brand visibility, and refactoring legacy code to boost performance. I've consistently improved user engagement, load times, and site efficiency by delivering seamless user experiences.                  </p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
