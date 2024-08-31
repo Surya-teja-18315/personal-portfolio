@@ -60,7 +60,7 @@ export const Banner = () => {
                 <h1>{'Full stack Developer'}</h1>
                   <p>
                   I specialize in using React.js and Tailwind CSS to create responsive, optimized web applications. My experience includes transforming designs into dynamic interfaces, enhancing brand visibility, and refactoring legacy code to boost performance. I've consistently improved user engagement, load times, and site efficiency by delivering seamless user experiences.                  </p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <button onClick={() => window.open('https://www.linkedin.com/in/surya-teja-d/', '_blank')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>
