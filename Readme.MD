@@ -1,3 +1,4 @@
+Site: [https://surya-teja-18315.github.io/personal-portfolio/](https://surya-teja-18315.github.io/personal-portfolio/)
 # Personal Portfolio Website in React
 
 Built using:
@@ -20,5 +21,5 @@ You may also see any lint errors in the console.
 
 ### `npm run build`
 
-Site: [https://surya-teja-18315.github.io/personal-portfolio/](https://surya-teja-18315.github.io/personal-portfolio/)
+
 
