@@ -10,6 +10,9 @@ import { Footer } from './components/Footer';
 import { Experience } from './components/Experience';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 
+const basename = process.env.NODE_ENV === 'production' ? "/personal-portfolio" : "";
+
+
 function App() {
   return (
     <div className="App">
@@ -46,6 +49,8 @@ export const router = createBrowserRouter([
       }
     ]
   }
-]);
+],
+{ basename }
+);
 
 export default App;
