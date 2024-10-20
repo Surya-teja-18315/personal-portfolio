@@ -59,7 +59,7 @@ export const Banner = () => {
                 <h1>{`Hi! I'm Surya Teja`}</h1>
                 <h1>{'Full stack Developer'}</h1>
                   <p>
-                  I specialize in using React.js and Tailwind CSS to create responsive, optimized web applications. My experience includes transforming designs into dynamic interfaces, enhancing brand visibility, and refactoring legacy code to boost performance. I've consistently improved user engagement, load times, and site efficiency by delivering seamless user experiences.                  </p>
+                  I specialize in building full-stack solutions that combine robust backend architectures with seamless front-end experiences. With experience in React, Python, Java, and cloud technologies like AWS and Docker, I have a proven track record of developing scalable applications, optimizing performance, and managing large datasets. From integrating complex systems to improving user interfaces, I am passionate about delivering solutions that not only meet business objectives but also enhance user satisfaction. My ability to adapt across technologies enables me to tackle challenges from multiple angles and drive impactful results.                  </p>
                   <button onClick={() => window.open('https://www.linkedin.com/in/surya-teja-d/', '_blank')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
