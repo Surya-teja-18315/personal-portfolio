@@ -29,8 +29,24 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
 
-    emailjs.send('service_sp4zw7m', 'template_7vs9g69', formDetails, 'l0daFZPfGMg57fQcT')
-      .then((response) => {
+    // Ensure all fields are filled out before sending
+    if (!formDetails.firstName || !formDetails.lastName || !formDetails.email || !formDetails.phone || !formDetails.message) {
+      setStatus({ success: false, message: 'Please fill in all required fields.' });
+      setButtonText("Send");
+      return;
+    }
+
+    // Prepare email parameters
+    const emailParams = {
+        firstName: formDetails.firstName,
+        lastName: formDetails.lastName,
+        email: formDetails.email,
+        phone: formDetails.phone,
+        message: formDetails.message
+    };
+
+    emailjs.send('service_sp4zw7m', 'template_ke0jeh7', emailParams, 'l0daFZPfGMg57fQcT')
+      .then(() => {
         setButtonText("Send");
         setFormDetails(formInitialDetails);
         setStatus({ success: true, message: 'Message sent successfully' });
@@ -64,6 +80,7 @@ export const Contact = () => {
                           value={formDetails.firstName}
                           placeholder="First Name"
                           onChange={(e) => onFormUpdate('firstName', e.target.value)}
+                          required
                         />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
@@ -72,6 +89,7 @@ export const Contact = () => {
                           value={formDetails.lastName}
                           placeholder="Last Name"
                           onChange={(e) => onFormUpdate('lastName', e.target.value)}
+                          required
                         />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
@@ -80,6 +98,7 @@ export const Contact = () => {
                           value={formDetails.email}
                           placeholder="Email Address"
                           onChange={(e) => onFormUpdate('email', e.target.value)}
+                          required
                         />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
@@ -88,6 +107,7 @@ export const Contact = () => {
                           value={formDetails.phone}
                           placeholder="Phone No."
                           onChange={(e) => onFormUpdate('phone', e.target.value)}
+                          required
                         />
                       </Col>
                       <Col size={12} className="px-1">
@@ -96,6 +116,7 @@ export const Contact = () => {
                           value={formDetails.message}
                           placeholder="Message"
                           onChange={(e) => onFormUpdate('message', e.target.value)}
+                          required
                         ></textarea>
                         <button type="submit"><span>{buttonText}</span></button>
                       </Col>
